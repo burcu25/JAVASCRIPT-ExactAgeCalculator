@@ -11,13 +11,13 @@ let age_Seconds = document.querySelector(".age__calculator--seconds");
 birthday.addEventListener("change", function event() {
     let ageYear = new Date().getFullYear()-new Date(birthday.value).getFullYear() ;
     let ageMonth = new Date().getMonth()-new Date(birthday.value).getMonth();
-    let ageDay = new Date().getDay()-new Date(birthday.value).getDay() ;
+    let ageDay = new Date().getDate()-new Date(birthday.value).getDate() ;
     let ageHour = new Date().getHours()-new Date(birthday.value).getHours() ;
     let ageMinutes = new Date().getMinutes()-new Date(birthday.value).getMinutes() ;
     let ageSeconds = new Date().getSeconds()-new Date(birthday.value).getSeconds() ;
     
     if (ageMonth < 0) {ageMonth += 12 && ageYear --}
-    if (ageDay <0) {ageDay +=30 && ageMonth --}
+    if (ageDay <0) {ageDay +=31 && ageMonth --}
     
     age_Year.firstElementChild.innerText = (ageYear +"").padStart(2,"0");
     age_Month.firstElementChild.innerText = (ageMonth+"").padStart(2,"0");
