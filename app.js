@@ -16,8 +16,9 @@ birthday.addEventListener("change", function event() {
     let ageMinutes = new Date().getMinutes()-new Date(birthday.value).getMinutes() ;
     let ageSeconds = new Date().getSeconds()-new Date(birthday.value).getSeconds() ;
     
-    if (ageMonth < 0) {ageMonth += 12 && (ageYear -= 1)}
-    if (ageDay <0) {ageDay +=31 && (ageMonth -= 1)}
+    if (ageDay <0) {ageDay +=31, ageMonth --}
+    if (ageMonth < 0) {ageMonth += 12, ageYear --}
+    
     
     age_Year.firstElementChild.innerText = (ageYear +"").padStart(2,"0");
     age_Month.firstElementChild.innerText = (ageMonth+"").padStart(2,"0");
