@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url(./images/img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Lato", sans-serif;
+    color: white;
+    /* background-color: black; */
+}
+.age__calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.age__calculator--header {
+    margin: 20px;
+    font-size: 2rem;
+    display: flex;
+
+}
+
+.age__calculator--output {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5rem;
+    line-height: 4rem;
+    font-size: 2rem;
+}
+.age__calculator--input {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    line-height: 3rem;
+}
+.loading {
+    /* width: 50px; */
+    position: relative;
+    top: -250px;
+    left: 49%;
+}
+.loading img {
+    width: 60px;
+}
