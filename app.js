@@ -16,6 +16,9 @@ birthday.addEventListener("change", function event() {
     let ageMinutes = new Date().getMinutes()-new Date(birthday.value).getMinutes() ;
     let ageSeconds = new Date().getSeconds()-new Date(birthday.value).getSeconds() ;
     
+    if (ageSeconds <0) {ageSeconds +=60, ageMinutes --}
+    if (ageMinutes <0) {ageMinutes +=60, ageHour --}
+    if (ageHour <0) {ageHour +=24, ageDay --}
     if (ageDay <0) {ageDay +=31, ageMonth --}
     if (ageMonth < 0) {ageMonth += 12, ageYear --}
     
